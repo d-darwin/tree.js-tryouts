@@ -1,26 +1,50 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <transition name="scale" mode="out-in">
+    <DButton
+      v-if="!sceneLaunched"
+      content="Launch Three.js scene"
+      @click="launchScene"
+    />
+    <ThreeScene v-else />
+  </transition>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { DButton } from "@darwin-studio/ui-vue";
+import ThreeScene from "./components/scene";
 
 export default {
   name: "App",
+
   components: {
-    HelloWorld,
+    DButton,
+    ThreeScene,
+  },
+
+  data() {
+    return {
+      sceneLaunched: false,
+    };
+  },
+
+  methods: {
+    launchScene() {
+      this.sceneLaunched = true;
+    },
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+</style>
+
+<style scoped lang="scss">
+@import "~@darwin-studio/ui-vue/src/assets/styles/transitions/scale";
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "three-js-test",
+  "name": "three-js-tryouts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,16 +8,21 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@darwin-studio/ui-vue": "^0.37.30",
     "core-js": "^3.6.5",
+    "three": "^0.128.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.14.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",

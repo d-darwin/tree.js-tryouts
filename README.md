@@ -1,4 +1,7 @@
-# three-js-test
+# three-js-tryouts
+
+Just a tryouts of the Tree.js lib.  
+See demo: 
 
 ## Project setup
 ```
