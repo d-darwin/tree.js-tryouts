@@ -1,7 +1,7 @@
 # three-js-tryouts
 
 Just a tryouts of the Tree.js lib.  
-See demo: 
+See [demo](https://competent-dijkstra-c791d2.netlify.app/).
 
 ## Project setup
 ```
