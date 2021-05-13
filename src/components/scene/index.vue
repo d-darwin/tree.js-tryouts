@@ -23,6 +23,15 @@ export default {
     this.initScene();
   },
 
+  watch: {
+    windowHeight() {
+      this.updateSceneSize();
+    },
+    windowWidth() {
+      this.updateSceneSize();
+    },
+  },
+
   methods: {
     initScene() {
       // DON'T use reactivity API with Three.js !!
@@ -58,6 +67,13 @@ export default {
       // this.camera.rotation.y = 0.5;
 
       this.animate();
+    },
+
+    updateSceneSize() {
+      this.camera.aspect = this.windowWidth / this.windowHeight;
+      this.camera.updateProjectionMatrix();
+
+      this.renderer.setSize(this.windowWidth, this.windowHeight);
     },
 
     animate() {
