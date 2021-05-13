@@ -5,7 +5,10 @@ import App from "./App.vue";
 
 createApp(App)
   .use(darwinStudioUiPlugin, {
-    // Plugin options
-    resetStyles: true, // default is true so you don't have to specify it explicitly
+    googleFonts: [
+      {
+        family: "Montserrat",
+      },
+    ],
   })
   .mount("#app");

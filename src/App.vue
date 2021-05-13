@@ -2,7 +2,9 @@
   <transition name="scale" mode="out-in">
     <DButton
       v-if="!sceneLaunched"
+      size="large"
       content="Launch Three.js scene"
+      autofocus
       @click="launchScene"
     />
     <ThreeScene v-else />
@@ -36,6 +38,10 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --font-family: "Montserrat", sans-serif;
+}
+
 body {
   height: 100vh;
   width: 100vw;
